@@ -1,0 +1,20 @@
+spring:
+  datasource:
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:postgresql://10.0.0.155:5432/wksdb_test
+      username: wks
+      password: qwerasdf
+      hikari:
+          auto-commit: true   #如果不设定为true  则batch 的初始化脚本无法执行成功
+      maxActive: 1
+  batch:
+    initialize-schema: ALWAYS # Database schema initialization mode.
+    job:
+      enabled: true
+    #names:
+    #schema:
+    #table-prefix:
+
+logging:
+    level:
+        ROOT: INFO
