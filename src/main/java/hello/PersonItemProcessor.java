@@ -21,11 +21,11 @@ public class PersonItemProcessor implements ItemProcessor<Person, Person> {
 
         log.info("Converting (" + person + ") into (" + transformedPerson + ")");
 
-
-        if(i==3){
+        i++;
+        if(i==7){
             throw new RuntimeException("now error");
         }
-        i++;
+
         return transformedPerson;
     }
 
