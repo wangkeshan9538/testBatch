@@ -87,7 +87,7 @@ public class BatchConfiguration {
                 .processor(processor())
                 .writer(writer)
                 .faultTolerant().skipPolicy((t,c)->true)
-                //.taskExecutor(new ThreadPoolTaskExecutor())
+                .taskExecutor(new ThreadPoolTaskExecutor())
                 .build();
      }
     // end::jobstep[]
